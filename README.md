@@ -1,4 +1,4 @@
-# productsApiMongoDb
+# Products API V2
 My products API but with MongoDB
 
 - Node.js
