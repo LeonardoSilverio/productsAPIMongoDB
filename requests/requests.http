@@ -1,0 +1,21 @@
+### Post new Product
+POST http://localhost:3000/products
+content-type: application/json
+
+{
+    "name": "X Tudo",
+    "price": "26"
+}
+
+### Get All
+GET http://localhost:3000/products
+
+### Get by Id
+GET http://localhost:3000/products/622e254f8541572ef7450833
+
+### Delete All
+DELETE http://localhost:3000/products
+
+### Delete By Id
+DELETE http://localhost:3000/products/622e254f8541572ef7450833
+
