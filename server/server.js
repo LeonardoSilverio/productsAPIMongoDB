@@ -1,3 +1,6 @@
+//.env
+require('dotenv').config();
+
 //Express Config
 const express = require('express');
 const app = express();
@@ -14,10 +17,9 @@ app.use('/products',productsRoutes);
 
 //MongoDb Config
 const mongoose = require('mongoose');
-const DB_USERNAME = encodeURI('silverio');
-const DB_PASSWORD = encodeURIComponent('NImIRt9wzYrqKLRW')
-const DB_DATABASE = ('ProductsApi')
-const uri = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@clusterproductapi.gz7z1.mongodb.net/${DB_DATABASE}?retryWrites=true&w=majority`
+const DB_USERNAME = process.env.DB_USER;
+const DB_PASSWORD = process.env.DB_PASS;
+const uri = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@clusterproductapi.gz7z1.mongodb.net/ProductsApi?retryWrites=true&w=majority`
 
 //Inicialize MongoDb and Express
 mongoose.connect(uri,()=>{
